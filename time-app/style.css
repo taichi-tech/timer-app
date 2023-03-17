@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    margin: 10px;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 200;
+    color: #333333
+}
+
+/* ハンバーガーメニュー（クリック前） */
+.nav-toggle {
+    display: block;
+    position: relative;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+
+.nav-toggle i {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #333333;
+    position: absolute;
+    transition: transform .5s, opacity .5s;
+}
+
+.nav-toggle i:nth-child(1){
+    top: 0;
+}
+.nav-toggle i:nth-child(2){
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.nav-toggle i:nth-child(3){
+    bottom: 0;
+}
+
+/* クリック後の処理 (Xに変形)*/
+.nav-toggle.show i:nth-child(1) {
+    transform: translateY(14px) rotate(-45deg);
+}
+.nav-toggle.show i:nth-child(2) {
+    opacity: 0;
+}
+.nav-toggle.show i:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+}
+
+/* メニューコンテント */
+.nav {
+    position: fixed;
+    top: 3rem;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+}
+
+.nav.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* テーマ切り替えトグルぼたん */
+.toggle-theme-button {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.button {
+    background-color: #dddddd;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.button::before {
+    position: absolute;
+    content: '';
+    background-color: #ffffff;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    margin: 4.3px;
+    transition: 0.3s;
+}
+
+input:checked + .button {
+    background-color: #3C4048;
+}
+input:checked + .button::before {
+    transform: translateX(60px);
+    background-color: #B2B2B2;
+}
+input {
+    display: none;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 80vh;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
