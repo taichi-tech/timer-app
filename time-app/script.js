@@ -67,7 +67,7 @@ const secondEl = document.querySelector('.sec');
 const hoursForClock = hour
 
 //針の動き
-hourEl.style.transform = `translate(-50%, 100%) rotate(${})`
+// hourEl.style.transform = `translate(-50%, 100%) rotate(${})` //針の角度を時間によって変更する処理を書く
 
 const scale = (num, in_min, in_max, out_min, out_max) => {
     return (num - in_min)*(out_max - out_min)/(in_max - in_min) + out_min;
