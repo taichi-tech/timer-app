@@ -89,6 +89,7 @@ a{
 .nav.show {
     opacity: 1;
     visibility: visible;
+    z-index: 1;
 }
 
 /* テーマ切り替えトグルぼたん */
@@ -129,6 +130,11 @@ input {
     display: none;
 }
 
+.content.show{
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+}
+
 .swiper {
     width: 80%;
     height: 600px;
@@ -152,14 +158,15 @@ input {
 
 .time-info {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform:  translateX(-50%) translateY(-50%);
 }
 
 .hour-info {
-    font-size: 90px;
+    font-size: 20px;
     font-weight: 300;
+    text-align: center;
     white-space: nowrap;
 }
 
@@ -179,6 +186,7 @@ input {
 }
 
 .clock {
+    margin-top: 70px;
     position: relative;
     width: 400px;
     height: 400px;
@@ -189,7 +197,6 @@ input {
     position: absolute;
     top: 50%;
     left: 50%;
-    height: 65px;
     width: 3px;
     transform-origin: bottom center;
     transition: all 0.5s ease-in;
@@ -197,16 +204,17 @@ input {
 
 .needle.hour {
     transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
 }
 
 .needle.min {
     transform: translate(-50%, -100%) rotate(0deg);
-    height: 100px;
+    height: 160px;
 }
 
 .needle.sec {
     transform: translate(-50%, -100%) rotate(0deg);
-    height: 100px;
+    height: 200px;
     background-color: #e74c3c;
 }
 
