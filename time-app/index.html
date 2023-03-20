@@ -12,10 +12,7 @@
             href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;600;800&display=swap"
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-        />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     </head>
     <body>
         <header>
@@ -42,7 +39,7 @@
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                <!-- Slides -->
+                    <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="clock-container">
                             <div class="clock">
@@ -58,17 +55,24 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        
+                        <div class="stop-watch">
+                            <div class="time-meter"></div>
+                            <div class="start-stop-button">
+                                <input type="checkbox" id="start-stop" />
+                                <label for="start-stop" class="start-button"></label>
+                            </div>
+                            <div class="display-time"></div>
+                        </div>
                     </div>
-                    <div class="swiper-slide">Slide 3</div>
                 </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-
+                <div class="swiper-slide">Slide 3</div>
             </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="./script.js"></script>
     </body>

@@ -39,6 +39,7 @@ a{
     position: relative;
     width: 1.75rem;
     height: 1.75rem;
+    cursor: pointer;
 }
 
 .nav-toggle i {
@@ -240,3 +241,22 @@ input {
     transform: translate(-50%, -50%);
     border-radius: 50%;
 }
+
+.stop-watch {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.start-stop-button {
+    display: flex;
+    align-items: center;
+}
+
+.start-button {
+    background-color: #B2B2B2;
+
+}
+
+
+
